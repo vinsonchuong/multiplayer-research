@@ -1,0 +1,44 @@
+{
+  "name": "multiplayer-research",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.0.0+sha512.b8fef5494bd3fe4cbd4edabd0745df2ee5be3e4b0b8b08fa643aa3e4c6702ccc0f00d68fa8a8c9858a735a0032485a44990ed2810526c875e416f001b17df12b",
+  "dependencies": {
+    "@shoelace-style/shoelace": "^2.20.1",
+    "@sindresorhus/slugify": "^2.2.1",
+    "initials": "^3.1.2",
+    "lodash": "^4.17.21",
+    "p2pcf": "^1.3.14",
+    "rxjs": "^7.8.2",
+    "signal-polyfill": "^0.2.2",
+    "uint8arrays": "^5.1.0",
+    "uniqolor": "^1.1.1",
+    "watchband": "^1.9.4",
+    "yjs": "^13.6.24"
+  },
+  "devDependencies": {
+    "ava": "^6.2.0",
+    "esbuild": "^0.25.3",
+    "passing-notes": "^6.8.6",
+    "passing-notes-rpc": "^1.2.3",
+    "passing-notes-ui": "^1.6.1",
+    "passing-notes-websocket": "^1.1.4",
+    "xo": "^0.59.3"
+  },
+  "scripts": {
+    "start": "PORT=8888 pass-notes ./api/index.js"
+  },
+  "xo": {
+    "prettier": true,
+    "space": 2,
+    "semicolon": false,
+    "envs": [
+      "browser"
+    ],
+    "rules": {
+      "n/file-extension-in-import": "off",
+      "unicorn/prefer-dom-node-text-content": "off",
+      "unicorn/prefer-dom-node-remove": "off"
+    }
+  }
+}

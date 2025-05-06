@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -o errexit
+set -o nounset
+# set -o xtrace
+set -o pipefail
+
+rm -rf 'dist'
+rm -f 'dist.zip'
+
+esbuild --bundle --outdir='dist' 'ui/text/index.js' 'ui/todo/index.js'
+cp 'ui/text/index.html' 'dist/text/'
+cp 'ui/todo/index.html' 'dist/todo/'
+
+cd dist
+zip -r '../dist.zip' .
